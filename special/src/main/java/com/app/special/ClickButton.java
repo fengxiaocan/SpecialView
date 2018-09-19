@@ -1,12 +1,15 @@
 package com.app.special;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.os.Build;
 import android.support.annotation.ColorInt;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
@@ -57,6 +60,13 @@ public class ClickButton extends TextView implements View.OnClickListener {
 	public ClickButton(Context context,AttributeSet attrs,int defStyleAttr) {
 		super(context,attrs,defStyleAttr);
 		init(attrs);
+	}
+	
+	@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+	public ClickButton(
+			Context context,@Nullable AttributeSet attrs,int defStyleAttr,int defStyleRes)
+	{
+		super(context,attrs,defStyleAttr,defStyleRes);
 	}
 	
 	public CharSequence getDefaultText() {

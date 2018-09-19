@@ -40,6 +40,10 @@
     <attr name="unpraiseDrawableTop" format="reference" />
     <attr name="unpraiseDrawableBottom" format="reference" />
 
+    <attr name="line_width" format="dimension" />
+    <attr name="line_color" format="color" />
+    <attr name="line_space" format="dimension" />
+
     <!--可变按钮-->
     <declare-styleable name="CheckButton">
         <attr name="checkBackground" />
@@ -85,5 +89,49 @@
         <attr name="unpraiseDrawableRight" />
         <attr name="unpraiseDrawableTop" />
         <attr name="unpraiseDrawableBottom" />
+    </declare-styleable>
+
+    <!--虚实线-->
+    <declare-styleable name="LineView">
+        <attr name="line_width" />
+        <attr name="line_color" />
+        <attr name="line_space" />
+        <!--线的类型-->
+        <attr name="line_type" format="enum">
+            <!--实线-->
+            <enum name="solid" value="1" />
+            <!--虚线-->
+            <enum name="dashed" value="2" />
+        </attr>
+        <attr name="orientation" format="enum">
+            <enum name="horizontal" value="1" />
+            <enum name="vertical" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="TwofoldView">
+        <!--首文字的大小-->
+        <attr name="one_text_size" format="dimension" />
+        <!--次文字的大小-->
+        <attr name="two_text_size" format="dimension" />
+        <!--首文字-->
+        <attr name="one_text" format="string" />
+        <!--次文字-->
+        <attr name="two_text" format="string" />
+        <!--首文字颜色-->
+        <attr name="one_text_color" format="color" />
+        <!--次文字颜色-->
+        <attr name="two_text_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="MoreTextView">
+        <attr name="un_line_color" format="color" />
+        <attr name="ellipsizeText" format="string" />
+        <attr name="unfoldText" format="string" />
+        <attr name="foldText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="LetterSpacingTextView">
+        <attr name="spacingSize" format="float" />
     </declare-styleable>
 </resources>
