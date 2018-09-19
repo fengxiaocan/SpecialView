@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="checkBackground" format="color|reference" />
+    <attr name="uncheckBackground" format="color|reference" />
+    <attr name="checkTextColor" format="color" />
+    <attr name="uncheckTextColor" format="color" />
+    <attr name="check" format="boolean" />
+    <attr name="clickable" format="boolean" />
+    <attr name="checkText" format="string" />
+    <attr name="checkDrawableLeft" format="reference" />
+    <attr name="checkDrawableRight" format="reference" />
+    <attr name="checkDrawableTop" format="reference" />
+    <attr name="checkDrawableBottom" format="reference" />
+    <attr name="uncheckDrawableLeft" format="reference" />
+    <attr name="uncheckDrawableRight" format="reference" />
+    <attr name="uncheckDrawableTop" format="reference" />
+    <attr name="uncheckDrawableBottom" format="reference" />
+    <attr name="uncheckText" format="string" />
+
+    <attr name="clickBackground" format="color|reference" />
+    <attr name="unclickBackground" format="color|reference" />
+    <attr name="clickTextColor" format="color" />
+    <attr name="unclickTextColor" format="color" />
+
+    <!--点赞按钮-->
+    <attr name="praiseBackground" format="color|reference" />
+    <attr name="unpraiseBackground" format="color|reference" />
+    <attr name="praiseTextColor" format="color" />
+    <attr name="unpraiseTextColor" format="color" />
+    <attr name="praise" format="boolean" />
+    <attr name="praiseable" format="boolean" />
+    <attr name="praiseNumber" format="integer" />
+    <attr name="praiseDrawableLeft" format="reference" />
+    <attr name="praiseDrawableRight" format="reference" />
+    <attr name="praiseDrawableTop" format="reference" />
+    <attr name="praiseDrawableBottom" format="reference" />
+    <attr name="unpraiseDrawableLeft" format="reference" />
+    <attr name="unpraiseDrawableRight" format="reference" />
+    <attr name="unpraiseDrawableTop" format="reference" />
+    <attr name="unpraiseDrawableBottom" format="reference" />
+
+    <!--可变按钮-->
+    <declare-styleable name="CheckButton">
+        <attr name="checkBackground" />
+        <attr name="uncheckBackground" />
+        <attr name="checkTextColor" />
+        <attr name="uncheckTextColor" />
+        <attr name="check" />
+        <attr name="clickable" />
+        <attr name="checkText" />
+        <attr name="checkDrawableLeft" />
+        <attr name="checkDrawableRight" />
+        <attr name="checkDrawableTop" />
+        <attr name="checkDrawableBottom" />
+        <attr name="uncheckDrawableLeft" />
+        <attr name="uncheckDrawableRight" />
+        <attr name="uncheckDrawableTop" />
+        <attr name="uncheckDrawableBottom" />
+        <attr name="uncheckText" />
+    </declare-styleable>
+    <!--点击按钮-->
+    <declare-styleable name="ClickButton">
+        <attr name="clickBackground" />
+        <attr name="unclickBackground" />
+        <attr name="clickTextColor" />
+        <attr name="unclickTextColor" />
+        <attr name="click" />
+    </declare-styleable>
+
+    <!--点赞按钮-->
+    <declare-styleable name="PraiseButton">
+        <attr name="praiseBackground" />
+        <attr name="unpraiseBackground" />
+        <attr name="praiseTextColor" />
+        <attr name="unpraiseTextColor" />
+        <attr name="praise" />
+        <attr name="praiseable" />
+        <attr name="praiseNumber" />
+        <attr name="praiseDrawableLeft" />
+        <attr name="praiseDrawableRight" />
+        <attr name="praiseDrawableTop" />
+        <attr name="praiseDrawableBottom" />
+        <attr name="unpraiseDrawableLeft" />
+        <attr name="unpraiseDrawableRight" />
+        <attr name="unpraiseDrawableTop" />
+        <attr name="unpraiseDrawableBottom" />
+    </declare-styleable>
+</resources>
