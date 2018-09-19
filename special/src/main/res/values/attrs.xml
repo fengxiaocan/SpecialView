@@ -134,4 +134,39 @@
     <declare-styleable name="LetterSpacingTextView">
         <attr name="spacingSize" format="float" />
     </declare-styleable>
+
+    <!--扇形环-->
+    <declare-styleable name="ComSectorView">
+        <attr name="backgroundColor" format="color" />
+        <!--圆的颜色-->
+        <attr name="circleColor" format="color" />
+        <attr name="startAngle" format="float" />
+        <!--内环颜色-->
+        <attr name="annulusColor" format="color" />
+        <!--文字-->
+        <attr name="SectorOneText" format="string" />
+
+        <attr name="SectorTwoText" format="string" />
+        <!--文字颜色-->
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <!--内环半径-->
+        <attr name="annulusRadius" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="RingProgressBar">
+        <attr name="ringColor" format="color" />
+        <attr name="ringProgressColor" format="color" />
+        <attr name="ringWidth" format="dimension" />
+        <attr name="ringTextColor" format="color" />
+        <attr name="ringTextSize" format="dimension" />
+        <attr name="max" format="integer" />
+        <attr name="textIsShow" format="boolean" />
+        <attr name="progress" format="integer" />
+        <attr name="ringPadding" format="dimension" />
+        <attr name="style">
+            <enum name="STROKE" value="0" />
+            <enum name="FILL" value="1" />
+        </attr>
+    </declare-styleable>
 </resources>
