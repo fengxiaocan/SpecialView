@@ -164,7 +164,7 @@
         <attr name="textIsShow" format="boolean" />
         <attr name="ringProgress" format="integer" />
         <attr name="ringPadding" format="dimension" />
-        <attr name="style">
+        <attr name="ringStyle">
             <enum name="STROKE" value="0" />
             <enum name="FILL" value="1" />
         </attr>

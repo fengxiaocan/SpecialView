@@ -95,7 +95,7 @@ public class RingProgressBar extends View {
         ringWidth = mTypedArray.getDimension(R.styleable.RingProgressBar_ringWidth,5);
         max = mTypedArray.getInteger(R.styleable.RingProgressBar_max,100);
         textIsShow = mTypedArray.getBoolean(R.styleable.RingProgressBar_textIsShow,true);
-        style = mTypedArray.getInt(R.styleable.RingProgressBar_style,0);
+        style = mTypedArray.getInt(R.styleable.RingProgressBar_ringStyle,0);
         progress = mTypedArray.getInteger(R.styleable.RingProgressBar_ringProgress,0);
         padding = mTypedArray.getDimension(R.styleable.RingProgressBar_ringPadding,5);
         mTypedArray.recycle();
