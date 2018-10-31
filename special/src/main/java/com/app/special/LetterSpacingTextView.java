@@ -78,8 +78,7 @@ public class LetterSpacingTextView extends TextView {
 		applySpacing();
 	}
 	
-	@Override
-	public CharSequence getText() {
+	public CharSequence getOriginalText() {
 		return originalText;
 	}
 	
