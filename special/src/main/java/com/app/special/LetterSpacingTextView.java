@@ -49,6 +49,8 @@ public class LetterSpacingTextView extends TextView {
 			spacing = type.getFloat(R.styleable.LetterSpacingTextView_spacingSize,0);
 			type.recycle();
 		}
+		originalText = getText();
+		applySpacing();
 	}
 	
 	/**
