@@ -46,7 +46,7 @@ public class LetterSpacingTextView extends TextView {
 		TypedArray type = this.getContext()
 		                      .obtainStyledAttributes(attrs,R.styleable.LetterSpacingTextView);
 		if (type != null) {
-			spacing = type.getFloat(R.styleable.MoreTextView_un_line_color,0);
+			spacing = type.getFloat(R.styleable.LetterSpacingTextView_spacingSize,0);
 			type.recycle();
 		}
 	}
