@@ -6,11 +6,12 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.drawable.GradientDrawable;
 import android.support.annotation.ColorInt;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
-
+import android.widget.LinearLayout;
 
 
 /**
@@ -50,9 +51,9 @@ public class LineView extends View {
         mLineWidth = type.getDimension(R.styleable.LineView_line_width,3);
         mLineSpace = type.getDimension(R.styleable.LineView_line_space,0);
         mLineColor = type.getColor(R.styleable.LineView_line_color,Color.BLUE);
-        int anInt = type.getInt(R.styleable.LineView_orientation,1);
+        int anInt = type.getInt(R.styleable.LineView_android_orientation,LinearLayout.HORIZONTAL);
         int lineType = type.getInt(R.styleable.LineView_line_type,2);
-        isHorizontal = anInt == 1;
+        isHorizontal = anInt == LinearLayout.HORIZONTAL;
         /*默认为虚线*/
         isDashed = lineType == 2;
         type.recycle();
