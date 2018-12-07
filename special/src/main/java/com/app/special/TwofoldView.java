@@ -25,8 +25,8 @@ public class TwofoldView extends android.support.v7.widget.AppCompatTextView {
 	 * The Default color.
 	 */
 	protected int defaultColor = Color.BLACK;//默认颜色
-	private String mOneText;
-	private String mTwoText;
+	private CharSequence mOneText;
+	private CharSequence mTwoText;
 	private int mOneTextColor;
 	private int mTwoTextColor;
 	private float mOneSize;
@@ -69,10 +69,10 @@ public class TwofoldView extends android.support.v7.widget.AppCompatTextView {
 	 *
 	 * @param str the str
 	 */
-	public void appendOneText(String str) {
+	public void appendOneText(CharSequence str) {
 		StringBuffer buffer = new StringBuffer(mOneText);
 		buffer.append(str);
-		mOneText = buffer.toString();
+		mOneText = buffer;
 		buildText();
 	}
 	
@@ -86,9 +86,9 @@ public class TwofoldView extends android.support.v7.widget.AppCompatTextView {
 		defaultColor = getCurrentTextColor();
 		if (type != null) {
 			CharSequence oneText = type.getText(R.styleable.TwofoldView_one_text);
-			mOneText = noNull(oneText).toString();
+			mOneText = noNull(oneText);
 			CharSequence twoText = type.getText(R.styleable.TwofoldView_two_text);
-			mTwoText = noNull(twoText).toString();
+			mTwoText = noNull(twoText);
 			
 			mOneTextColor = type.getColor(R.styleable.TwofoldView_one_text_color,defaultColor);
 			mTwoTextColor = type.getColor(R.styleable.TwofoldView_two_text_color,defaultColor);
@@ -126,7 +126,7 @@ public class TwofoldView extends android.support.v7.widget.AppCompatTextView {
 	 *
 	 * @return the one text
 	 */
-	public String getOneText() {
+	public CharSequence getOneText() {
 		return mOneText;
 	}
 	
@@ -135,7 +135,7 @@ public class TwofoldView extends android.support.v7.widget.AppCompatTextView {
 	 *
 	 * @param str the str
 	 */
-	public void setOneText(String str) {
+	public void setOneText(CharSequence str) {
 		mOneText = str;
 		buildText();
 	}
@@ -145,7 +145,7 @@ public class TwofoldView extends android.support.v7.widget.AppCompatTextView {
 	 *
 	 * @return the two text
 	 */
-	public String getTwoText() {
+	public CharSequence getTwoText() {
 		return mTwoText;
 	}
 	
@@ -154,8 +154,8 @@ public class TwofoldView extends android.support.v7.widget.AppCompatTextView {
 	 *
 	 * @param str the str
 	 */
-	public void setTwoText(String str) {
-		mTwoText = noNull(str).toString();
+	public void setTwoText(CharSequence str) {
+		mTwoText = noNull(str);
 		buildText();
 	}
 	
@@ -165,34 +165,13 @@ public class TwofoldView extends android.support.v7.widget.AppCompatTextView {
 	 *
 	 * @param str the str
 	 */
-	public void appendTwoText(String str) {
+	public void appendTwoText(CharSequence str) {
 		StringBuffer buffer = new StringBuffer(mTwoText);
 		buffer.append(str);
-		mTwoText = buffer.toString();
+		mTwoText = buffer;
 		buildText();
 	}
 	
-	/**
-	 * Remove in one text.
-	 * 移除某个字符串
-	 *
-	 * @param str the str
-	 */
-	public void removeInOneText(String str) {
-		mOneText = noNull(mOneText).toString().replaceAll(str,"");
-		buildText();
-	}
-	
-	/**
-	 * Remove in two text.
-	 * 移除某个字符串
-	 *
-	 * @param str the str
-	 */
-	public void removeInTwoText(String str) {
-		mTwoText = noNull(mTwoText).toString().replaceAll(str,"");
-		buildText();
-	}
 	
 	/**
 	 * Gets one text color.
@@ -252,7 +231,9 @@ public class TwofoldView extends android.support.v7.widget.AppCompatTextView {
 	 * Build text.
 	 */
 	protected void buildText() {
-		SpannableStringBuilder builder = new SpannableStringBuilder(mOneText + mTwoText);
+		SpannableStringBuilder builder = new SpannableStringBuilder();
+		builder.append(mOneText);
+		builder.append(mTwoText);
 		if (!TextUtils.isEmpty(mOneText)) {
 			AbsoluteSizeSpan oneSpan = new AbsoluteSizeSpan((int)mOneSize,false);
 			ForegroundColorSpan oneColorSpan = new ForegroundColorSpan(mOneTextColor);
