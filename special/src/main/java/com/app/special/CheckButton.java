@@ -318,7 +318,14 @@ public class CheckButton extends TextView implements View.OnClickListener {
                     mUncheckDrawableRight.getMinimumHeight());
         }
     }
-
+    public void postSetCheck(final boolean isCheck,long time) {
+        postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                setCheck(isCheck);
+            }
+        },time);
+    }
     /**
      * 监听器状态改变
      */

@@ -175,4 +175,12 @@ public class ClickButton extends TextView implements View.OnClickListener {
         this.unclickColor = unclickColor;
         postInvalidate();
     }
+    public void postSetClick(final boolean isCheck,long time) {
+        postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                setCanClick(isCheck);
+            }
+        },time);
+    }
 }
