@@ -77,8 +77,10 @@ public class PraiseButton extends TextView implements View.OnClickListener, Runn
         TypedArray type = getContext().obtainStyledAttributes(attrs, R.styleable.PraiseButton);
         isCheck = type.getBoolean(R.styleable.PraiseButton_praise, DEFAULT_CHECK);
         clickable = type.getBoolean(R.styleable.PraiseButton_praiseable, DEFAULT_CAN_CLICK);
-        checkBackgroundId = type.getResourceId(R.styleable.PraiseButton_praiseBackground, DEFAULT_CHECK_BACKGROUND);
-        uncheckBackgroundId = type.getResourceId(R.styleable.PraiseButton_unpraiseBackground, DEFAULT_UNCHECK_BACKGROUND);
+        checkBackgroundId = type.getResourceId(R.styleable.PraiseButton_praiseBackground,
+                DEFAULT_CHECK_BACKGROUND);
+        uncheckBackgroundId = type.getResourceId(R.styleable.PraiseButton_unpraiseBackground,
+                DEFAULT_UNCHECK_BACKGROUND);
         checkColor = type.getColor(R.styleable.PraiseButton_praiseTextColor, getCurrentTextColor());
         uncheckColor = type.getColor(R.styleable.PraiseButton_unpraiseTextColor,
                 getCurrentTextColor());
@@ -311,6 +313,15 @@ public class PraiseButton extends TextView implements View.OnClickListener, Runn
             mUncheckDrawableRight.setBounds(0, 0, mUncheckDrawableRight.getMinimumWidth(),
                     mUncheckDrawableRight.getMinimumHeight());
         }
+    }
+
+    public void postSetCheck(final boolean isCheck, long time) {
+        postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                setCheck(isCheck);
+            }
+        }, time);
     }
 
     /**
