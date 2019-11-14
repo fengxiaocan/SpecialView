@@ -21,10 +21,6 @@ import android.util.AttributeSet;
  */
 public class TwofoldView extends android.support.v7.widget.AppCompatTextView {
 	
-	/**
-	 * The Default color.
-	 */
-	protected int defaultColor = Color.BLACK;//默认颜色
 	private CharSequence mOneText;
 	private CharSequence mTwoText;
 	private int mOneTextColor;
@@ -83,15 +79,14 @@ public class TwofoldView extends android.support.v7.widget.AppCompatTextView {
 	 */
 	protected void initAttrs(AttributeSet attrs) {
 		TypedArray type = this.getContext().obtainStyledAttributes(attrs,R.styleable.TwofoldView);
-		defaultColor = getCurrentTextColor();
 		if (type != null) {
 			CharSequence oneText = type.getText(R.styleable.TwofoldView_one_text);
 			mOneText = noNull(oneText);
 			CharSequence twoText = type.getText(R.styleable.TwofoldView_two_text);
 			mTwoText = noNull(twoText);
 			
-			mOneTextColor = type.getColor(R.styleable.TwofoldView_one_text_color,defaultColor);
-			mTwoTextColor = type.getColor(R.styleable.TwofoldView_two_text_color,defaultColor);
+			mOneTextColor = type.getColor(R.styleable.TwofoldView_one_text_color,getCurrentTextColor());
+			mTwoTextColor = type.getColor(R.styleable.TwofoldView_two_text_color,getCurrentTextColor());
 			
 			mOneSize = type.getDimension(R.styleable.TwofoldView_one_text_size,getTextSize());
 			mTwoSize = type.getDimension(R.styleable.TwofoldView_two_text_size,getTextSize());

@@ -63,6 +63,16 @@
         <attr name="uncheckDrawableBottom" />
         <attr name="uncheckText" />
     </declare-styleable>
+    <declare-styleable name="CheckTextView">
+        <attr name="checkBackground" />
+        <attr name="uncheckBackground" />
+        <attr name="checkTextColor" />
+        <attr name="uncheckTextColor" />
+        <attr name="check" />
+        <attr name="clickable" />
+        <attr name="checkText" />
+        <attr name="uncheckText" />
+    </declare-styleable>
     <!--点击按钮-->
     <declare-styleable name="ClickButton">
         <attr name="clickBackground" />

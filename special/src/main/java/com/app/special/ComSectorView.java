@@ -58,10 +58,7 @@ public class ComSectorView extends View {
 
     protected void init(AttributeSet attrs){
         TypedArray type = this.getContext().obtainStyledAttributes(attrs,R.styleable.ComSectorView);
-        mBackgroundColor = type.getColor(R.styleable.ComSectorView_backgroundColor,
-
-
-                                         Color.TRANSPARENT);
+        mBackgroundColor = type.getColor(R.styleable.ComSectorView_backgroundColor,Color.TRANSPARENT);
         mDefaultColor = type.getColor(R.styleable.ComSectorView_circleColor,DEFAULT_COLOR);
         mAnnulusColor = type.getColor(R.styleable.ComSectorView_annulusColor,DEFAULT_COLOR);
         mAnnulusRadius = type.getFloat(R.styleable.ComSectorView_annulusRadius,0F);
