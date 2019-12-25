@@ -51,7 +51,7 @@ public class LineView extends View {
         mLineWidth = type.getDimension(R.styleable.LineView_line_width,3);
         mLineSpace = type.getDimension(R.styleable.LineView_line_space,0);
         mLineColor = type.getColor(R.styleable.LineView_line_color,Color.BLACK);
-        int anInt = type.getInt(R.styleable.LineView_android_orientation,LinearLayout.HORIZONTAL);
+        int anInt = type.getInt(R.styleable.LineView_line_orientation,LinearLayout.HORIZONTAL);
         int lineType = type.getInt(R.styleable.LineView_line_type,2);
         isHorizontal = anInt == LinearLayout.HORIZONTAL;
         /*默认为虚线*/

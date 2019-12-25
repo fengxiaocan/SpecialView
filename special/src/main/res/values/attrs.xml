@@ -113,7 +113,12 @@
             <!--虚线-->
             <enum name="dashed" value="2" />
         </attr>
-        <attr name="android:orientation"/>
+        <attr name="line_orientation" format="enum">
+            <!--实线-->
+            <enum name="horizontal" value="1" />
+            <!--虚线-->
+            <enum name="vertical" value="2" />
+        </attr>
     </declare-styleable>
 
 
