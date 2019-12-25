@@ -41,7 +41,6 @@ public class ClickButton extends TextView implements View.OnClickListener {
     protected int unclickColor;
     private OnCanClickListener mOnCanClickListener;
 
-
     public ClickButton(Context context) {
         this(context, null);
     }
@@ -121,6 +120,9 @@ public class ClickButton extends TextView implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        if (mOnClickListener != null){
+            mOnClickListener.onClick(v);
+        }
         if (mOnCanClickListener != null) {
             if (isCanClick) {
                 setCanClick(mOnCanClickListener.canClick());
