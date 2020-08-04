@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.ForegroundColorSpan;
 import android.util.AttributeSet;
+import android.widget.TextView;
 
 /**
  * The type Twofold view.
@@ -19,7 +20,7 @@ import android.util.AttributeSet;
  * @时间: 14 :48
  * @描述： 双重字体的自定义view
  */
-public class TwofoldView extends android.support.v7.widget.AppCompatTextView {
+public class TwofoldView extends TextView {
 	
 	private CharSequence mOneText;
 	private CharSequence mTwoText;

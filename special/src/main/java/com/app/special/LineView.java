@@ -7,8 +7,8 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.GradientDrawable;
-import android.support.annotation.ColorInt;
-import android.support.annotation.Nullable;
+import androidx.annotation.ColorInt;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -48,9 +48,9 @@ public class LineView extends View {
     protected void init(AttributeSet attrs){
         TypedArray type = this.getContext().obtainStyledAttributes(attrs,
                                                                    R.styleable.LineView);
-        mLineWidth = type.getDimension(R.styleable.LineView_line_width,3);
+        mLineWidth = type.getDimension(R.styleable.LineView_line_width,8);
         mLineSpace = type.getDimension(R.styleable.LineView_line_space,0);
-        mLineColor = type.getColor(R.styleable.LineView_line_color,Color.BLACK);
+        mLineColor = type.getColor(R.styleable.LineView_line_color,Color.GRAY);
         int anInt = type.getInt(R.styleable.LineView_line_orientation,LinearLayout.HORIZONTAL);
         int lineType = type.getInt(R.styleable.LineView_line_type,2);
         isHorizontal = anInt == LinearLayout.HORIZONTAL;

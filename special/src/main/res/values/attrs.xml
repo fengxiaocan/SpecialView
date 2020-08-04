@@ -43,6 +43,7 @@
     <attr name="line_width" format="dimension" />
     <attr name="line_color" format="color" />
     <attr name="line_space" format="dimension" />
+    <attr name="click" format="boolean" />
 
     <!--可变按钮-->
     <declare-styleable name="CheckButton">

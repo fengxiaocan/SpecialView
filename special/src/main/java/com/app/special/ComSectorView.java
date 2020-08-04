@@ -7,7 +7,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
-import android.support.annotation.ColorInt;
+import androidx.annotation.ColorInt;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;

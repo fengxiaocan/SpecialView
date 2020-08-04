@@ -2,9 +2,10 @@ package com.app.special;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.annotation.RequiresApi;
 
 public class DrawView extends View {
     public DrawView(Context context) {

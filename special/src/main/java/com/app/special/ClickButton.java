@@ -4,10 +4,11 @@ package com.app.special;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Build;
-import android.support.annotation.ColorInt;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
@@ -56,7 +57,7 @@ public class ClickButton extends TextView implements View.OnClickListener {
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public ClickButton(Context context, @Nullable AttributeSet attrs, int defStyleAttr,
-            int defStyleRes)
+                       int defStyleRes)
     {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
